@@ -1,4 +1,4 @@
 .DS_store
 myapps
 *.env
-firebase.json
+serviceAccountKey.json
