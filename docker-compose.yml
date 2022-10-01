@@ -12,3 +12,4 @@ services:
     env_file:
       - ./.my.env
     tty: true
+    restart: always
