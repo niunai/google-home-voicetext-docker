@@ -1,14 +1,14 @@
 version: "3"
 
 services:
-  node-google-home:
+  google-home-voicetext:
     build:
       context: ./
-    container_name: 'node-google-home'
-    working_dir: '/google-home-voicetext/'
+    container_name: "google-home-voicetext"
+    working_dir: "/google-home-voicetext/"
     ports:
-      - '8082:8082'
-      - '8083:8083'
+      - "8082:8082"
+      - "8083:8083"
     env_file:
       - ./.my.env
     tty: true
