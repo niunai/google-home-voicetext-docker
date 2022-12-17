@@ -6,9 +6,10 @@ services:
       context: ./
     container_name: "google-home-voicetext"
     working_dir: "/google-home-voicetext/"
-    ports:
-      - "8082:8082"
-      - "8083:8083"
+    # ports:
+    #   - "8082:8082"
+    #   - "8083:8083"
+    network_mode: "host"
     env_file:
       - ./.my.env
     tty: true
