@@ -6,6 +6,7 @@ RUN apt-get install -y vim avahi-daemon libavahi-compat-libdnssd-dev locales
 RUN locale-gen ja_JP.UTF-8
 RUN echo "export LANG=ja_JP.UTF-8" >>~/.bashrc
 
+ADD https://api.github.com/repos/niunai/google-home-voicetext/git/refs/heads/master /.git-hashref
 RUN git clone https://github.com/niunai/google-home-voicetext.git
 WORKDIR /google-home-voicetext
 RUN npm install
