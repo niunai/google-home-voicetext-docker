@@ -1,10 +1,8 @@
-FROM node:18
+FROM node:18-alpine
 
 RUN npm update -y -g npm
-RUN apt-get update
-RUN apt-get install -y vim avahi-daemon libavahi-compat-libdnssd-dev locales
-RUN locale-gen ja_JP.UTF-8
-RUN echo "export LANG=ja_JP.UTF-8" >>~/.bashrc
+RUN apk update
+RUN apk add avahi git
 
 ADD https://api.github.com/repos/niunai/google-home-voicetext/git/refs/heads/master /.git-hashref
 RUN git clone https://github.com/niunai/google-home-voicetext.git
