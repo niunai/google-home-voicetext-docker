@@ -2,7 +2,7 @@ FROM node:18-alpine
 
 RUN npm update -y -g npm
 RUN apk update
-RUN apk add avahi git
+RUN apk add avahi git openrc dbus
 
 ADD https://api.github.com/repos/niunai/google-home-voicetext/git/refs/heads/master /.git-hashref
 RUN git clone https://github.com/niunai/google-home-voicetext.git
