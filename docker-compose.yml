@@ -1,5 +1,7 @@
 services:
   google-home-voicetext:
+    extra_hosts:
+      - "k8s-81.local:10.15.8.81"
     build:
       context: ./
     container_name: "google-home-voicetext"
