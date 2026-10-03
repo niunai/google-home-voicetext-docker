@@ -12,3 +12,8 @@ services:
       - ./.my.env
     tty: true
     restart: always
+
+    volumes:
+      - ./localCA.crt:/usr/local/share/ca-certificates/localCA.crt:ro
+    environment:
+      NODE_EXTRA_CA_CERTS: /usr/local/share/ca-certificates/localCA.crt

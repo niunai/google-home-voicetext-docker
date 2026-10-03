@@ -2,3 +2,4 @@
 myapps
 *.env
 serviceAccountKey.json
+localCA.crt
